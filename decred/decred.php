@@ -15,7 +15,7 @@ function decred_init() {
 	if ( ! class_exists( 'WC_Payment_Gateway' ) ) return;
 	
 	// Include our gateway
-	
+	require_once('gateway.php');
 	// Lets add it too WooCommerce
     add_filter( 'woocommerce_payment_gateways', 'decred_gateway' );
 	function decred_gateway( $methods ) {
